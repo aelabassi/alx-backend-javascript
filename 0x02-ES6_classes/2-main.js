@@ -13,12 +13,14 @@ try {
 
 try {
   const c2 = new HolbertonCourse('ES6', '1', ['Bob', 'Jane']);
+  c2.length = 12;
 } catch (err) {
   console.log(err);
 }
 
 try {
-    const c3 = new HolbertonCourse('ES6', 1, 'hello');
-}catch (err){
-    console.log(err);
+  const c3 = new HolbertonCourse('ES6', 1, 'hello');
+  console.log(c3.students);
+} catch (err) {
+  console.log(err);
 }
