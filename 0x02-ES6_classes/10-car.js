@@ -6,7 +6,7 @@ export default class Car {
   }
 
   get brand() {
-    this._brand;
+    return this._brand;
   }
 
   /**
@@ -18,7 +18,7 @@ export default class Car {
   }
 
   get motor() {
-    this._motor;
+    return this._motor;
   }
 
   /**
@@ -30,7 +30,7 @@ export default class Car {
   }
 
   get color() {
-    this._color;
+    return this._color;
   }
 
   /**
