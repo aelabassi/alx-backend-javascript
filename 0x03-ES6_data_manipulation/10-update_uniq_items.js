@@ -1,6 +1,6 @@
 export default function updateUniqueItems(map) {
   if (!(map instanceof Map)) {
-    return 'Cannot process';
+    threw new Error('Cannot process');
   }
   for (const [key, item] of map) {
     if (item === 1) {
