@@ -6,3 +6,7 @@ export default interface Teacher {
     location: string;
     [propName: string]: any;
 }
+
+interface Directors extends Teacher {
+    numberOfReports: number;
+}
