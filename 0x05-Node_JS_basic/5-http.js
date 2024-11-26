@@ -9,6 +9,8 @@ const DB_FILE = process.argv.length > 2 ? process.argv[2] : '';
  * Counts the number of students in the database
  * @param {string} path - Path to the database file
  * @returns {Promise} - Promise object represents the count
+ * @throws {Error} - If the database cannot be loaded
+ * @author: EL Abassi Abderrazaq : https://github.com/Abdoelabassi
  */
 const countStudents = (path) => new Promise((resolve, reject) => {
   if (!path) {
@@ -21,7 +23,6 @@ const countStudents = (path) => new Promise((resolve, reject) => {
       const reports = [];
       const lines = data.trim().split('\n').slice(1);
       reports.push(`Number of students: ${lines.length}`);
-      console.log(`Number of students: ${lines.length}`);
       const fields = {};
       lines.forEach((line) => {
         const student = line.split(',');
@@ -31,7 +32,6 @@ const countStudents = (path) => new Promise((resolve, reject) => {
       for (const field in fields) {
         if (field) {
           reports.push(`Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}`);
-          console.log(`Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}`);
         }
       }
       resolve(reports.join('\n'));
@@ -63,7 +63,7 @@ const serverRoutesHandlers = {
       res.statusCode = 500;
       res.setHeader('Content-Type', 'text/plain');
       res.setHeader('Content-Length', responseText.length);
-      res.setHeader('Content-Length', responseText.length);
+      res.write(Buffer.from(responseText));
     }
   },
 };
