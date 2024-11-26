@@ -15,17 +15,17 @@ class StudentsController {
           if (a[0].toLowerCase() < b[0].toLowerCase()) {
             return -1;
           }
-            if (a[0].toLowerCase() > b[0].toLowerCase()) {
-                return 1;
-            }
-            return 0;
-        }
+          if (a[0].toLowerCase() > b[0].toLowerCase()) {
+            return 1;
+          }
+          return 0;
+        };
         for (const [field, students] of Object.entries(data).sort(compare)) {
-            reports.push([
-                `Number of students in ${field}: ${students.length}.`,
-                'List:',
-                students.map((student) => student.firstname).join(', '),
-            ].join(' '));
+          reports.push([
+            `Number of students in ${field}: ${students.length}.`,
+            'List:',
+            students.map((student) => student.firstname).join(', '),
+          ].join(' '));
         }
         response.status(200).send(reports.join('\n'));
       }).catch((error) => {
@@ -43,10 +43,10 @@ class StudentsController {
     readDatabase(DB_FILE).then(
       (data) => {
         let reportText = '';
-        if(Object.keys(data).includes(major)) {
+        if (Object.keys(data).includes(major)) {
           const students = data[major].map((student) => student.firstname).join(', ');
           reportText = `List: ${students}`;
-            response.status(200).send(reportText);
+          response.status(200).send(reportText);
         }
       },
     ).catch((error) => {
