@@ -16,7 +16,7 @@ describe('calculNumber', () => {
       assert.strictEqual(calculNumber(4.3, 5.3), 9);
     });
     it('should return 3', () => {
-        assert.strictEqual(calculNumber(1.499999, 2.49999), 3);
-    })
+      assert.strictEqual(calculNumber(1.499999, 2.49999), 3);
+    });
   });
 });
