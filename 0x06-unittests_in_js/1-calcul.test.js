@@ -2,21 +2,21 @@ const assert = require('assert');
 const calculateNumber = require('./1-calcul');
 
 describe('calculateNumber', () => {
-  describe('sUM', () => {
+  describe('SUM', () => {
     it('should return the sum of two numbers', () => {
       assert.strictEqual(calculateNumber('SUM', 1, 3), 4);
       assert.strictEqual(calculateNumber('SUM', 1.5, 3.5), 6);
       assert.strictEqual(calculateNumber('SUM', 1.4, 3.5), 5);
     });
   });
-  describe('sUBSTRACT', () => {
+  describe('SUBSTRACT', () => {
     it('should return the substraction of two numbers', () => {
       assert.strictEqual(calculateNumber('SUBSTRACT', 3, 1), 2);
       assert.strictEqual(calculateNumber('SUBSTRACT', 3.5, 1.5), 2);
       assert.strictEqual(calculateNumber('SUBSTRACT', 3.5, 1.4), 3);
     });
   });
-  describe('dIVIDE', () => {
+  describe('DIVIDE', () => {
     it('should return the division of two numbers', () => {
       assert.strictEqual(calculateNumber('DIVIDE', 4, 2), 2);
       assert.strictEqual(calculateNumber('DIVIDE', 5.5, 2.5), 2);

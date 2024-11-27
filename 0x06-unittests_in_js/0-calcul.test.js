@@ -2,7 +2,7 @@ const assert = require('assert');
 const calculateNumber = require('./0-calcul');
 
 describe('calculateNumber', () => {
-  describe('#round', () => {
+
     it('should return 3', () => {
       assert.strictEqual(calculateNumber(1.2, 2.2), 3);
     });
@@ -18,5 +18,4 @@ describe('calculateNumber', () => {
     it('should return 3', () => {
       assert.strictEqual(calculateNumber(1.499999, 2.49999), 3);
     });
-  });
 });
