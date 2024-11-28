@@ -9,11 +9,11 @@ describe('calculateNumber', () => {
       assert.strictEqual(calculateNumber('SUM', 1.4, 3.5), 5);
     });
   });
-  describe('sUBSTRACT', () => {
+  describe('SUBTRACT', () => {
     it('should return the substraction of two numbers', () => {
-      assert.strictEqual(calculateNumber('SUBSTRACT', 3, 1), 2);
-      assert.strictEqual(calculateNumber('SUBSTRACT', 3.5, 1.5), 2);
-      assert.strictEqual(calculateNumber('SUBSTRACT', 3.5, 1.4), 3);
+      assert.strictEqual(calculateNumber('SUBTRACT', 3, 1), 2);
+      assert.strictEqual(calculateNumber('SUBTRACT', 3.5, 1.5), 2);
+      assert.strictEqual(calculateNumber('SUBTRACT', 3.5, 1.4), 3);
     });
   });
   describe('dIVIDE', () => {
