@@ -15,6 +15,12 @@ app.get('/available_payments', (_req, res) => {
     res.json({ payment_methods: { credit_cards: true, paypal: false } });
 });
 
+// Middleware to parse JSON bodies
+app.use(express.json());
+
+// Middleware to parse URL-encoded bodies
+app.use(express.urlencoded({ extended: true }));
+
 app.post('/login', (req, res) => {
     let username = '';
 
