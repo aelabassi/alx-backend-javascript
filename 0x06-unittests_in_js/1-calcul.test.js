@@ -9,7 +9,7 @@ describe('calculateNumber', () => {
       assert.strictEqual(calculateNumber('SUM', 1.4, 3.5), 5);
     });
   });
-  describe('SUBTRACT', () => {
+  describe('sUBTRACT', () => {
     it('should return the substraction of two numbers', () => {
       assert.strictEqual(calculateNumber('SUBTRACT', 3, 1), 2);
       assert.strictEqual(calculateNumber('SUBTRACT', 3.5, 1.5), 2);
